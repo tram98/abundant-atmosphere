@@ -13,7 +13,7 @@ public class ModItems {
     public static final DeferredRegister<Item> Items =
             DeferredRegister.create(ForgeRegistries.ITEMS, Abundant_Atmosphere.MOD_ID);
 
-    public static final RegistryObject<Item> AMBER_CHUNK = Items.register(  "amber_chunk",
+    public static final RegistryObject<Item> AMBER_CHUNKS = Items.register(  "amber_chunks",
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static final RegistryObject<Item> ANCIENT_AMBER = Items.register(  "ancient_amber",
