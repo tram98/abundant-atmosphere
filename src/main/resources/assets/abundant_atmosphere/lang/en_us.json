@@ -1,4 +1,6 @@
 {
   "item.abundant_atmosphere.amber_chunks": "Amber Chunks",
-  "item.abundant_atmosphere.ancient_amber": "Ancient Amber"
+  "item.abundant_atmosphere.ancient_amber": "Ancient Amber",
+
+  "block.abundant_atmosphere.mossy_stone": "Mossy Stone"
 }
