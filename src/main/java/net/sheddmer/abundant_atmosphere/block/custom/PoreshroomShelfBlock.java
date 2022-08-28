@@ -20,11 +20,23 @@ public class PoreshroomShelfBlock extends HorizontalDirectionalBlock {
     public PoreshroomShelfBlock(Properties properties) {super(properties);
     }
 
-    private static final VoxelShape SHAPE =
-            Block.box(1, 1, 8, 15, 15, 16);
+    private static final VoxelShape SHAPE_NORTH = Block.box(1, 1, 8, 15, 15, 16);
+    private static final VoxelShape SHAPE_EAST = Block.box(1, 1, 8, 15, 15, 16);
+    private static final VoxelShape SHAPE_SOUTH = Block.box(1, 1, 8, 15, 15, 16);
+    private static final VoxelShape SHAPE_WEST = Block.box(1, 1, 8, 15, 15, 16);
 
     public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        return SHAPE;
+        switch ((Direction)state.getValue(FACING)) {
+            case NORTH:
+                return SHAPE_NORTH;
+            case SOUTH:
+                return SHAPE_EAST;
+            case WEST:
+                return SHAPE_SOUTH;
+            case EAST:
+            default:
+                return SHAPE_WEST;
+        }
     }
 
     /* FACING */
