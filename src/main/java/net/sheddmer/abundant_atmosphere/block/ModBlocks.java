@@ -1,13 +1,11 @@
 package net.sheddmer.abundant_atmosphere.block;
 
 import net.minecraft.data.worldgen.features.TreeFeatures;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,7 +13,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sheddmer.abundant_atmosphere.Abundant_Atmosphere;
 import net.sheddmer.abundant_atmosphere.block.custom.DeepslatePotBlock;
-import net.sheddmer.abundant_atmosphere.block.custom.MossyDeepslateBlock;
 import net.sheddmer.abundant_atmosphere.block.custom.PoreshroomShelfBlock;
 import net.sheddmer.abundant_atmosphere.item.ModItems;
 
@@ -31,7 +28,7 @@ public class ModBlocks {
             CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     public static final RegistryObject<Block> MOSSY_DEEPSLATE = registerBlock("mossy_deepslate",
-            () -> new MossyDeepslateBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f)
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f)
                     .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.DEEPSLATE)),
             CreativeModeTab.TAB_BUILDING_BLOCKS);
 
