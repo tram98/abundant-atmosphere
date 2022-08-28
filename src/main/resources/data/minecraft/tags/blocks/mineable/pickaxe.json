@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "abundant_atmosphere:mixed_bricks",
+    "abundant_atmosphere:mossy_stone",
+    "abundant_atmosphere:mossy_deepslate",
+    "abundant_atmosphere:deepslate_pot"
+  ]
+}

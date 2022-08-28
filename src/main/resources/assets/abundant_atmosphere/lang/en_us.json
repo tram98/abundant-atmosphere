@@ -3,5 +3,10 @@
   "item.abundant_atmosphere.ancient_amber": "Ancient Amber",
 
   "block.abundant_atmosphere.mossy_stone": "Mossy Stone",
-  "block.abundant_atmosphere.mossy_deepslate": "Mossy Deepslate"
+  "block.abundant_atmosphere.mossy_deepslate": "Mossy Deepslate",
+  "block.abundant_atmosphere.mixed_bricks": "Mixed Bricks",
+  "block.abundant_atmosphere.deepslate_pot": "Deepslate Pot",
+  "block.abundant_atmosphere.poreshroom": "Poreshroom",
+  "block.abundant_atmosphere.potted_poreshroom": "Potted Poreshroom",
+  "block.abundant_atmosphere.poreshroom_shelf": "Poreshroom Shelf"
 }

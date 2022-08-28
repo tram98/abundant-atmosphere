@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "abundant_atmosphere:block/poreshroom"
+  }
+}
