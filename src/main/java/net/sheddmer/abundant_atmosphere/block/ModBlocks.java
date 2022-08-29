@@ -13,6 +13,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sheddmer.abundant_atmosphere.Abundant_Atmosphere;
 import net.sheddmer.abundant_atmosphere.block.custom.DeepslatePotBlock;
+import net.sheddmer.abundant_atmosphere.block.custom.FoxfireShelfBlock;
 import net.sheddmer.abundant_atmosphere.block.custom.PoreshroomShelfBlock;
 import net.sheddmer.abundant_atmosphere.item.ModItems;
 
@@ -54,6 +55,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> PORESHROOM_SHELF = registerBlock("poreshroom_shelf",
             () -> new PoreshroomShelfBlock(BlockBehaviour.Properties.of(Material.PLANT).instabreak()
                     .sound(SoundType.FUNGUS).noCollission()),
+            CreativeModeTab.TAB_DECORATIONS);
+
+    public static final RegistryObject<Block> FOXFIRE_SHELF = registerBlock("foxfire_shelf",
+            () -> new FoxfireShelfBlock(BlockBehaviour.Properties.of(Material.PLANT).instabreak()
+                    .sound(SoundType.FUNGUS).noCollission().lightLevel(
+                            (state) -> state.getValue(FoxfireShelfBlock.NIGHTTIME) ? 6 : 0)),
             CreativeModeTab.TAB_DECORATIONS);
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
