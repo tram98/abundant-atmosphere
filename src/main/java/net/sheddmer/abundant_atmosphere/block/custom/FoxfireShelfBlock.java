@@ -16,8 +16,15 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class FoxfireShelfBlock extends HorizontalDirectionalBlock {
+    
+    //All your blockstates will be up here. Directions is already here
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
+    //Here I'm adding another blockstate "lit". It is a boolean property (boolean means true or false) so it will have two options.
+    //Also be careful not to add to many blockstates to one block. It can create a lot of lag for the game. In this scenario we have
+    //4 directions and two possibilities for lit, making 4x2= 8 possibilities. This isn't problematic but you can see how they can add up fast
+    public static final BooleanProperty LIT = BooleanProperty.create("lit");
+    
     public FoxfireShelfBlock(Properties properties) {super(properties);
     }
 
@@ -51,7 +58,9 @@ public class FoxfireShelfBlock extends HorizontalDirectionalBlock {
     public BlockState mirror(BlockState pState, Mirror pMirror) {
         return pState.rotate(pMirror.getRotation(pState.getValue(FACING)));
     }
+    
+    //Blockstate definition is pretty much the registry for your blockstates within the block. If you don't put them here your game will have errors
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        pBuilder.add(FACING);
+        pBuilder.add(FACING, LIT);
     }
 }
