@@ -60,7 +60,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> FOXFIRE_SHELF = registerBlock("foxfire_shelf",
             () -> new FoxfireShelfBlock(BlockBehaviour.Properties.of(Material.PLANT).instabreak()
                     .sound(SoundType.FUNGUS).noCollission().lightLevel(
-                            (state) -> state.getValue(FoxfireShelfBlock.NIGHTTIME) ? 6 : 0)),
+                            (state) -> state.getValue(FoxfireShelfBlock.LIT) ? 6 : 0)),
             CreativeModeTab.TAB_DECORATIONS);
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
