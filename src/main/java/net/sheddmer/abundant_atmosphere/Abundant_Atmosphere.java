@@ -52,7 +52,6 @@ public class Abundant_Atmosphere
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_PORESHROOM.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.PORESHROOM_SHELF.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.FOXFIRE_SHELF.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FOXFIRE_SHELF_ON.get(), RenderType.cutout());
     }
 
     private void setup(final FMLCommonSetupEvent event) {
