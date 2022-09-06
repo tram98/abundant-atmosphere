@@ -2,7 +2,7 @@
   "variants": {
     "facing=north,unlit=true": { "model": "abundant_atmosphere:block/foxfire_shelf" },
     "facing=east,unlit=true": { "model": "abundant_atmosphere:block/foxfire_shelf", "y": 90 },
-    "facing=south,unit=true": { "model": "abundant_atmosphere:block/foxfire_shelf", "y": 180 },
+    "facing=south,unlit=true": { "model": "abundant_atmosphere:block/foxfire_shelf", "y": 180 },
     "facing=west,unlit=true": { "model": "abundant_atmosphere:block/foxfire_shelf", "y": 270 },
 
     "facing=north,unlit=false": { "model": "abundant_atmosphere:block/foxfire_shelf_lit" },
