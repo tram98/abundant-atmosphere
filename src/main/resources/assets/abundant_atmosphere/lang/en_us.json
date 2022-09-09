@@ -5,10 +5,14 @@
   "block.abundant_atmosphere.mossy_stone": "Mossy Stone",
   "block.abundant_atmosphere.mossy_deepslate": "Mossy Deepslate",
   "block.abundant_atmosphere.mixed_bricks": "Mixed Bricks",
+  "block.abundant_atmosphere.ancient_pot": "Ancient Pot",
   "block.abundant_atmosphere.deepslate_pot": "Deepslate Pot",
   "block.abundant_atmosphere.poreshroom": "Poreshroom",
   "block.abundant_atmosphere.potted_poreshroom": "Potted Poreshroom",
   "block.abundant_atmosphere.poreshroom_shelf": "Poreshroom Shelf",
   "block.abundant_atmosphere.foxfire_shelf": "Foxfire Shelf",
-  "block.abundant_atmosphere.foxfire_shelf_on": "Foxfire Shelf On"
+  "block.abundant_atmosphere.foxfire_shelf_on": "Foxfire Shelf On",
+  "block.abundant_atmosphere.deepslate_pillar": "Deepslate Pillar",
+  "block.abundant_atmosphere.curved_mangrove_roots": "Curved Mangrove Roots",
+  "block.abundant_atmosphere.centerpiece_statue": "Centerpiece Statue"
 }

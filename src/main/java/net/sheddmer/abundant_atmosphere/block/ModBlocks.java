@@ -12,9 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sheddmer.abundant_atmosphere.Abundant_Atmosphere;
-import net.sheddmer.abundant_atmosphere.block.custom.DeepslatePotBlock;
-import net.sheddmer.abundant_atmosphere.block.custom.FoxfireShelfBlock;
-import net.sheddmer.abundant_atmosphere.block.custom.PoreshroomShelfBlock;
+import net.sheddmer.abundant_atmosphere.block.custom.*;
 import net.sheddmer.abundant_atmosphere.item.ModItems;
 
 import java.util.function.Supplier;
@@ -37,6 +35,11 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2f)
                     .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.STONE)),
             CreativeModeTab.TAB_BUILDING_BLOCKS);
+
+    public static final RegistryObject<Block> ANCIENT_POT = registerBlock("ancient_pot",
+            () -> new DeepslatePotBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f)
+                    .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.DEEPSLATE)),
+            CreativeModeTab.TAB_DECORATIONS);
 
     public static final RegistryObject<Block> DEEPSLATE_POT = registerBlock("deepslate_pot",
             () -> new DeepslatePotBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f)
@@ -61,6 +64,22 @@ public class ModBlocks {
             () -> new FoxfireShelfBlock(BlockBehaviour.Properties.of(Material.PLANT).instabreak()
                     .sound(SoundType.FUNGUS).noCollission().lightLevel(
                             (state) -> state.getValue(FoxfireShelfBlock.UNLIT) ? 0 : 6)),
+            CreativeModeTab.TAB_DECORATIONS);
+
+    public static final RegistryObject<Block> DEEPSLATE_PILLAR = registerBlock("deepslate_pillar",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f)
+                    .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.DEEPSLATE_BRICKS)),
+            CreativeModeTab.TAB_BUILDING_BLOCKS);
+
+    public static final RegistryObject<Block> CURVED_MANGROVE_ROOTS = registerBlock("curved_mangrove_roots",
+            () -> new CurvedRootsBlock(BlockBehaviour.Properties.of(Material.WOOD).instabreak()
+                    .sound(SoundType.MANGROVE_ROOTS).noCollission()),
+            CreativeModeTab.TAB_DECORATIONS);
+
+    public static final RegistryObject<Block> CENTERPIECE_STATUE = registerBlock("centerpiece_statue",
+            () -> new CenterPieceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4f)
+                    .requiresCorrectToolForDrops().explosionResistance(6)
+                    .sound(SoundType.DEEPSLATE)),
             CreativeModeTab.TAB_DECORATIONS);
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {

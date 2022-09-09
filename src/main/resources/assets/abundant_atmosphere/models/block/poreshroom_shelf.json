@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"render_type": "minecraft:cutout",
 	"textures": {
 		"0": "abundant_atmosphere:block/poreshroom_shelf_inside",
 		"3": "abundant_atmosphere:block/poreshroom_shelf_cap",

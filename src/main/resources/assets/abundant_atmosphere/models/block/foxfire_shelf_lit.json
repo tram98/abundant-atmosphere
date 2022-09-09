@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"render_type": "minecraft:cutout",
 	"textures": {
 		"0": "abundant_atmosphere:block/foxfire_shelf_inside_on",
 		"1": "abundant_atmosphere:block/foxfire_shelf_cap_on",
