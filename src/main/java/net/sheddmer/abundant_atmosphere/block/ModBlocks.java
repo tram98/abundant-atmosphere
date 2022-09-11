@@ -34,6 +34,18 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2f)
                     .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.STONE)),
             CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> POLISHED_CALCITE = registerBlock("polished_calcite",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.75f)
+                    .requiresCorrectToolForDrops().explosionResistance(0.75f).sound(SoundType.CALCITE)),
+            CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CALCITE_BRICKS = registerBlock("calcite_bricks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.75f)
+                    .requiresCorrectToolForDrops().explosionResistance(0.75f).sound(SoundType.CALCITE)),
+            CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> POLISHED_DRIPSTONE = registerBlock("polished_dripstone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5f)
+                    .requiresCorrectToolForDrops().explosionResistance(1).sound(SoundType.DRIPSTONE_BLOCK)),
+            CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     public static final RegistryObject<Block> ANCIENT_POT = registerBlock("ancient_pot",
             () -> new DeepslatePotBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f)

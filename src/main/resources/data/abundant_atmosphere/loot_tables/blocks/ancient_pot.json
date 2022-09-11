@@ -399,7 +399,12 @@
           "name": "minecraft:coal",
           "weight": 7
         }
-      ]
-          }
-        ]
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 10.0,
+        "min": 5.0
       }
+    }
+  ]
+}
