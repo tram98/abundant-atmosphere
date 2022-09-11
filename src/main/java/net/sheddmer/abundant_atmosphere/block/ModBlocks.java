@@ -25,7 +25,6 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5f)
                     .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.STONE)),
             CreativeModeTab.TAB_BUILDING_BLOCKS);
-
     public static final RegistryObject<Block> MOSSY_DEEPSLATE = registerBlock("mossy_deepslate",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f)
                     .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.DEEPSLATE)),
@@ -40,11 +39,18 @@ public class ModBlocks {
             () -> new DeepslatePotBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f)
                     .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.DEEPSLATE)),
             CreativeModeTab.TAB_DECORATIONS);
-
     public static final RegistryObject<Block> DEEPSLATE_POT = registerBlock("deepslate_pot",
             () -> new DeepslatePotBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f)
                     .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.DEEPSLATE)),
             CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> DEEPSLATE_PILLAR = registerBlock("deepslate_pillar",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f)
+                    .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.DEEPSLATE_BRICKS)),
+            CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CHISELED_DEEPSLATE_TILES = registerBlock("chiseled_deepslate_tiles",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2f)
+                    .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.DEEPSLATE_TILES)),
+            CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     public static final RegistryObject<Block> PORESHROOM = registerBlock("poreshroom",
             () -> new MushroomBlock(BlockBehaviour.Properties.of(Material.PLANT)
@@ -54,22 +60,17 @@ public class ModBlocks {
     public static final RegistryObject<Block> POTTED_PORESHROOM = registerBlockWithoutBlockItem("potted_poreshroom",
             () -> new FlowerPotBlock(null, ModBlocks.PORESHROOM,
                     BlockBehaviour.Properties.of(Material.PLANT).sound(SoundType.FUNGUS).noOcclusion()));
-
     public static final RegistryObject<Block> PORESHROOM_SHELF = registerBlock("poreshroom_shelf",
             () -> new PoreshroomShelfBlock(BlockBehaviour.Properties.of(Material.PLANT).instabreak()
                     .sound(SoundType.FUNGUS).noCollission()),
             CreativeModeTab.TAB_DECORATIONS);
-
     public static final RegistryObject<Block> FOXFIRE_SHELF = registerBlock("foxfire_shelf",
             () -> new FoxfireShelfBlock(BlockBehaviour.Properties.of(Material.PLANT).instabreak()
                     .sound(SoundType.FUNGUS).noCollission().lightLevel(
                             (state) -> state.getValue(FoxfireShelfBlock.UNLIT) ? 0 : 6)),
             CreativeModeTab.TAB_DECORATIONS);
 
-    public static final RegistryObject<Block> DEEPSLATE_PILLAR = registerBlock("deepslate_pillar",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f)
-                    .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.DEEPSLATE_BRICKS)),
-            CreativeModeTab.TAB_BUILDING_BLOCKS);
+
 
     public static final RegistryObject<Block> CURVED_MANGROVE_ROOTS = registerBlock("curved_mangrove_roots",
             () -> new CurvedRootsBlock(BlockBehaviour.Properties.of(Material.WOOD).instabreak()
@@ -80,6 +81,16 @@ public class ModBlocks {
             () -> new CenterPieceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(4f)
                     .requiresCorrectToolForDrops().explosionResistance(6)
                     .sound(SoundType.DEEPSLATE)),
+            CreativeModeTab.TAB_DECORATIONS);
+
+    public static final RegistryObject<Block> MOSS_CLUMP = registerBlock("moss_clump",
+            () -> new GlowLichenBlock(BlockBehaviour.Properties.of(Material.MOSS).instabreak()
+                    .sound(SoundType.MOSS).noCollission()),
+            CreativeModeTab.TAB_DECORATIONS);
+
+    public static final RegistryObject<Block> SMALL_LILY_PAD = registerBlock("small_lily_pad",
+            () -> new WaterlilyBlock(BlockBehaviour.Properties.of(Material.WATER_PLANT).instabreak()
+                    .sound(SoundType.LILY_PAD)),
             CreativeModeTab.TAB_DECORATIONS);
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
