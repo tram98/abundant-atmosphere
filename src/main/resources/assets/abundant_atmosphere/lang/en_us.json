@@ -17,5 +17,14 @@
   "block.abundant_atmosphere.curved_mangrove_roots": "Curved Mangrove Roots",
   "block.abundant_atmosphere.centerpiece_statue": "Centerpiece Statue",
   "block.abundant_atmosphere.moss_clump": "Moss Clump",
-  "block.abundant_atmosphere.small_lily_pad": "Small Lily Pad"
+  "block.abundant_atmosphere.small_lily_pad": "Small Lily Pad",
+  "block.abundant_atmosphere.polished_calcite": "Polished Calcite",
+  "block.abundant_atmosphere.calcite_bricks": "Calcite Bricks",
+  "block.abundant_atmosphere.chiseled_calcite_bricks": "Chiseled Calcite Bricks",
+  "block.abundant_atmosphere.polished_dripstone": "Polished Dripstone",
+  "block.abundant_atmosphere.dripstone_tiles": "Dripstone Tiles",
+  "block.abundant_atmosphere.basalt_bricks": "Basalt Bricks",
+  "block.abundant_atmosphere.chiseled_basalt_bricks": "Chiseled Basalt Bricks",
+  "block.abundant_atmosphere.blackstone_basalt_tiles": "Blackstone Basalt Tiles"
+
 }

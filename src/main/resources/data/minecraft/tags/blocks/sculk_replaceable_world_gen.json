@@ -7,6 +7,8 @@
     "minecraft:cracked_deepslate_bricks",
     "minecraft:cracked_deepslate_tiles",
     "minecraft:polished_deepslate",
-    "abundant_atmosphere:deepslate_pillar"
+    "abundant_atmosphere:deepslate_pillar",
+    "abundant_atmosphere:chiseled_deepslate_tiles",
+    "abundant_atmosphere:basalt_bricks"
   ]
 }

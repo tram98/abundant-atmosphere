@@ -34,6 +34,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2f)
                     .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.STONE)),
             CreativeModeTab.TAB_BUILDING_BLOCKS);
+
     public static final RegistryObject<Block> POLISHED_CALCITE = registerBlock("polished_calcite",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.75f)
                     .requiresCorrectToolForDrops().explosionResistance(0.75f).sound(SoundType.CALCITE)),
@@ -42,9 +43,29 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.75f)
                     .requiresCorrectToolForDrops().explosionResistance(0.75f).sound(SoundType.CALCITE)),
             CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CHISELED_CALCITE_BRICKS = registerBlock("chiseled_calcite_bricks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.75f)
+                    .requiresCorrectToolForDrops().explosionResistance(0.75f).sound(SoundType.CALCITE)),
+            CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> POLISHED_DRIPSTONE = registerBlock("polished_dripstone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5f)
                     .requiresCorrectToolForDrops().explosionResistance(1).sound(SoundType.DRIPSTONE_BLOCK)),
+            CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> DRIPSTONE_TILES = registerBlock("dripstone_tiles",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.5f)
+                    .requiresCorrectToolForDrops().explosionResistance(1).sound(SoundType.DRIPSTONE_BLOCK)),
+            CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> BASALT_BRICKS = registerBlock("basalt_bricks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.25f)
+                    .requiresCorrectToolForDrops().explosionResistance(4.2f).sound(SoundType.BASALT)),
+            CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CHISELED_BASALT_BRICKS = registerBlock("chiseled_basalt_bricks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.25f)
+                    .requiresCorrectToolForDrops().explosionResistance(4.2f).sound(SoundType.BASALT)),
+            CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> BLACKSTONE_BASALT_TILES = registerBlock("blackstone_basalt_tiles",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.25f)
+                    .requiresCorrectToolForDrops().explosionResistance(4.2f).sound(SoundType.BASALT)),
             CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     public static final RegistryObject<Block> ANCIENT_POT = registerBlock("ancient_pot",
@@ -81,7 +102,10 @@ public class ModBlocks {
                     .sound(SoundType.FUNGUS).noCollission().lightLevel(
                             (state) -> state.getValue(FoxfireShelfBlock.UNLIT) ? 0 : 6)),
             CreativeModeTab.TAB_DECORATIONS);
-
+    public static final RegistryObject<Block> CATSBANE = registerBlock("catsbane",
+            () -> new CatsbaneBlock(BlockBehaviour.Properties.of(Material.PLANT).instabreak()
+                    .sound(SoundType.FUNGUS).noCollission()),
+            CreativeModeTab.TAB_DECORATIONS);
 
 
     public static final RegistryObject<Block> CURVED_MANGROVE_ROOTS = registerBlock("curved_mangrove_roots",
