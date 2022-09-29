@@ -8,10 +8,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -47,6 +46,9 @@ public class FoxfireShelfBlock extends HorizontalDirectionalBlock {
                 return SHAPE_WEST;
         }
     }
+    public boolean canSurvive(BlockState p_58073_, LevelReader p_58074_, BlockPos p_58075_) {
+        return p_58074_.getBlockState(p_58075_.relative(p_58073_.getValue(FACING).getOpposite())).getMaterial().isSolid();
+    }
 
     /* FACING */
 
@@ -69,6 +71,10 @@ public class FoxfireShelfBlock extends HorizontalDirectionalBlock {
         }
 
         return InteractionResult.SUCCESS;
+    }
+
+    public BlockState updateShape(BlockState p_58083_, Direction p_58084_, BlockState p_58085_, LevelAccessor p_58086_, BlockPos p_58087_, BlockPos p_58088_) {
+        return p_58084_.getOpposite() == p_58083_.getValue(FACING) && !p_58083_.canSurvive(p_58086_, p_58087_) ? Blocks.AIR.defaultBlockState() : super.updateShape(p_58083_, p_58084_, p_58085_, p_58086_, p_58087_, p_58088_);
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {

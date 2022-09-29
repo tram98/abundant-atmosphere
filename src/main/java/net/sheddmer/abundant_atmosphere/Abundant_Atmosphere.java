@@ -37,5 +37,9 @@ public class Abundant_Atmosphere
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PORESHROOM.getId(), ModBlocks.POTTED_PORESHROOM);
         });
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.FOXFIRE_MUSHROOM.getId(), ModBlocks.POTTED_FOXFIRE_MUSHROOM);
+        });
+
     }
 }

@@ -8,6 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sheddmer.abundant_atmosphere.Abundant_Atmosphere;
+import net.sheddmer.abundant_atmosphere.item.custom.ModFoods;
 
 public class ModItems {
     public static final DeferredRegister<Item> Items =
@@ -17,6 +18,15 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static final RegistryObject<Item> ANCIENT_AMBER = Items.register(  "ancient_amber",
+            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+    public static final RegistryObject<Item> FROG_LEG = Items.register(  "frog_leg",
+            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.FROG_LEG)));
+
+    public static final RegistryObject<Item> COOKED_FROG_LEG = Items.register(  "cooked_frog_leg",
+            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.COOKED_FROG_LEG)));
+
+    public static final RegistryObject<Item> FROG_HIDE = Items.register(  "frog_hide",
             () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static void register(IEventBus eventBus) {

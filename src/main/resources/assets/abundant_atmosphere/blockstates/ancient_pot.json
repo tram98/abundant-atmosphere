@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "abundant_atmosphere:block/deepslate_pot"
+      "model": "abundant_atmosphere:block/ancient_pot"
     }
   }
 }

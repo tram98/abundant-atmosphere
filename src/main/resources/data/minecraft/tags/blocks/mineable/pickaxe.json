@@ -7,6 +7,16 @@
     "abundant_atmosphere:ancient_pot",
     "abundant_atmosphere:deepslate_pot",
     "abundant_atmosphere:deepslate_pillar",
-    "abundant_atmosphere:centerpiece_statue"
+    "abundant_atmosphere:centerpiece_statue",
+    "abundant_atmosphere:mud_pot",
+    "abundant_atmosphere:carved_mud_pot",
+    "abundant_atmosphere:polished_calcite",
+    "abundant_atmosphere:calcite_bricks",
+    "abundant_atmosphere:chiseled_calcite_bricks",
+    "abundant_atmosphere:polished_dripstone",
+    "abundant_atmosphere:dripstone_tiles",
+    "abundant_atmosphere:basalt_bricks",
+    "abundant_atmosphere:chiseled_basalt_bricks",
+    "abundant_atmosphere:blackstone_basalt_tiles"
   ]
 }

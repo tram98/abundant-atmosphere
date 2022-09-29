@@ -1,6 +1,9 @@
 {
   "item.abundant_atmosphere.amber_chunks": "Amber Chunks",
   "item.abundant_atmosphere.ancient_amber": "Ancient Amber",
+  "item.abundant_atmosphere.frog_leg": "Frog Leg",
+  "item.abundant_atmosphere.cooked_frog_leg": "Cooked Frog Leg",
+  "item.abundant_atmosphere.frog_hide": "Frog Hide",
 
   "block.abundant_atmosphere.mossy_stone": "Mossy Stone",
   "block.abundant_atmosphere.mossy_deepslate": "Mossy Deepslate",
@@ -12,6 +15,8 @@
   "block.abundant_atmosphere.poreshroom": "Poreshroom",
   "block.abundant_atmosphere.potted_poreshroom": "Potted Poreshroom",
   "block.abundant_atmosphere.poreshroom_shelf": "Poreshroom Shelf",
+  "block.abundant_atmosphere.foxfire_mushroom": "Foxfire Mushroom",
+  "block.abundant_atmosphere.potted_foxfire_mushroom": "Potted Foxfire Mushroom",
   "block.abundant_atmosphere.foxfire_shelf": "Foxfire Shelf",
   "block.abundant_atmosphere.foxfire_shelf_on": "Foxfire Shelf On",
   "block.abundant_atmosphere.curved_mangrove_roots": "Curved Mangrove Roots",
@@ -25,6 +30,9 @@
   "block.abundant_atmosphere.dripstone_tiles": "Dripstone Tiles",
   "block.abundant_atmosphere.basalt_bricks": "Basalt Bricks",
   "block.abundant_atmosphere.chiseled_basalt_bricks": "Chiseled Basalt Bricks",
-  "block.abundant_atmosphere.blackstone_basalt_tiles": "Blackstone Basalt Tiles"
+  "block.abundant_atmosphere.blackstone_basalt_tiles": "Blackstone Basalt Tiles",
+  "block.abundant_atmosphere.catsbane": "Catsbane",
+  "block.abundant_atmosphere.mud_pot": "Mud Pot",
+  "block.abundant_atmosphere.carved_mud_pot": "Carved Mud Pot"
 
 }
