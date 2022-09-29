@@ -26,12 +26,12 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.STONE)),
             CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> MOSSY_DEEPSLATE = registerBlock("mossy_deepslate",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f)
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3)
                     .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.DEEPSLATE)),
             CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     public static final RegistryObject<Block> MIXED_BRICKS = registerBlock("mixed_bricks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2f)
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2)
                     .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.STONE)),
             CreativeModeTab.TAB_BUILDING_BLOCKS);
 
@@ -69,28 +69,33 @@ public class ModBlocks {
             CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     public static final RegistryObject<Block> ANCIENT_POT = registerBlock("ancient_pot",
-            () -> new DeepslatePotBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f)
+            () -> new DeepslatePotBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3)
                     .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.DEEPSLATE)),
             CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> DEEPSLATE_POT = registerBlock("deepslate_pot",
-            () -> new DeepslatePotBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f)
+            () -> new DeepslatePotBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3)
                     .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.DEEPSLATE)),
             CreativeModeTab.TAB_DECORATIONS);
+
     public static final RegistryObject<Block> MUD_POT = registerBlock("mud_pot",
-            () -> new MudPotBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1f)
+            () -> new MudPotBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1)
                     .requiresCorrectToolForDrops().explosionResistance(3).sound(SoundType.PACKED_MUD)),
             CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> CARVED_MUD_POT = registerBlock("carved_mud_pot",
-            () -> new MudPotBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1f)
+            () -> new MudPotBlock(BlockBehaviour.Properties.of(Material.STONE).strength(1)
                     .requiresCorrectToolForDrops().explosionResistance(3).sound(SoundType.PACKED_MUD)),
             CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> CHISELED_MUD_BRICKS = registerBlock("chiseled_mud_bricks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1)
+                    .requiresCorrectToolForDrops().explosionResistance(3).sound(SoundType.MUD_BRICKS)),
+            CreativeModeTab.TAB_BUILDING_BLOCKS);
 
     public static final RegistryObject<Block> DEEPSLATE_PILLAR = registerBlock("deepslate_pillar",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f)
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3)
                     .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.DEEPSLATE_BRICKS)),
             CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> CHISELED_DEEPSLATE_TILES = registerBlock("chiseled_deepslate_tiles",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2f)
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2)
                     .requiresCorrectToolForDrops().explosionResistance(6).sound(SoundType.DEEPSLATE_TILES)),
             CreativeModeTab.TAB_BUILDING_BLOCKS);
 
