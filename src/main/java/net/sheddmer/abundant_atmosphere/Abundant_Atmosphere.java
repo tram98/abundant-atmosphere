@@ -27,8 +27,6 @@ public class Abundant_Atmosphere
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
-
-
         eventBus.addListener(this::setup);
 
         // Register ourselves for server and other game events we are interested in
