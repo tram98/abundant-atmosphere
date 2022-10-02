@@ -6,7 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "abundant_atmosphere:mossy_stone"
+          "Name": "abundant_atmosphere:mossy_deepslate"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
