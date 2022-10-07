@@ -3,12 +3,12 @@
   "group": "calcite",
   "key": {
     "#": {
-      "item": "abundant_atmosphere:calcite_bricks"
+      "item": "abundant_atmosphere:calcite_brick_slab"
     }
   },
   "pattern": [
-    "##",
-    "##"
+    "#",
+    "#"
   ],
   "result": {
     "item": "abundant_atmosphere:chiseled_calcite_bricks"
