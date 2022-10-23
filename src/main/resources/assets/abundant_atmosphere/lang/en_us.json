@@ -21,6 +21,8 @@
   "block.abundant_atmosphere.foxfire_mushroom": "Foxfire Mushroom",
   "block.abundant_atmosphere.foxfire_shelf": "Foxfire Shelf",
   "block.abundant_atmosphere.curved_mangrove_roots": "Curved Mangrove Roots",
+  "block.abundant_atmosphere.mangrove_weave": "Mangrove Weave",
+  "block.abundant_atmosphere.mangrove_weave_mat": "Mangrove Weave Mat",
   "block.abundant_atmosphere.centerpiece_statue": "Centerpiece Statue",
   "block.abundant_atmosphere.moss_clump": "Moss Clump",
   "block.abundant_atmosphere.small_lily_pad": "Small Lily Pad",
@@ -63,5 +65,6 @@
   "block.abundant_atmosphere.ash_button": "Ash Button",
   "block.abundant_atmosphere.ash_pressure_plate": "Ash Pressure Plate",
   "block.abundant_atmosphere.ash_leaves": "Ash Leaves",
+  "block.abundant_atmosphere.hanging_ash_leaves": "Hanging Ash Leaves",
   "block.abundant_atmosphere.ash_sapling": "Ash Sapling"
 }

@@ -14,55 +14,63 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+import javax.annotation.Nullable;
+
 public class PoreshroomShelfBlock extends HorizontalDirectionalBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    protected static final float AABB_OFFSET = 3.0F;
+    protected static final VoxelShape NORTH_AABB = Block.box(1.0D, 1.0D, 8.0D, 15.0D, 15.0D, 16.0D);
+    protected static final VoxelShape EAST_AABB = Block.box(0.0D, 1.0D, 1.0D, 8.0D, 15.0D, 15.0D);
+    protected static final VoxelShape SOUTH_AABB = Block.box(1.0D, 1.0D, 0.0D, 15.0D, 15.0D, 8.0D);
+    protected static final VoxelShape WEST_AABB = Block.box(8.0D, 1.0D, 1.0D, 16.0D, 15.0D, 15.0D);
+
 
     public PoreshroomShelfBlock(Properties properties) {super(properties);
+        this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
 
-    private static final VoxelShape SHAPE_NORTH = Block.box(1, 1, 8, 15, 15, 16);
-    private static final VoxelShape SHAPE_EAST = Block.box(1, 1, 0, 15, 15, 8);
-    private static final VoxelShape SHAPE_SOUTH = Block.box(8, 1, 1, 16, 15, 15);
-    private static final VoxelShape SHAPE_WEST = Block.box(0, 1, 1, 8, 15, 15);
-
-    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        switch ((Direction)pState.getValue(FACING)) {
+    public VoxelShape getShape(BlockState p_51787_, BlockGetter p_51788_, BlockPos p_51789_, CollisionContext p_51790_) {
+        switch ((Direction)p_51787_.getValue(FACING)) {
             case NORTH:
-                return SHAPE_NORTH;
-            case SOUTH:
-                return SHAPE_EAST;
-            case WEST:
-                return SHAPE_SOUTH;
-            case EAST:
             default:
-                return SHAPE_WEST;
+                return NORTH_AABB;
+            case SOUTH:
+                return SOUTH_AABB;
+            case WEST:
+                return WEST_AABB;
+            case EAST:
+                return EAST_AABB;
         }
     }
-    public boolean canSurvive(BlockState p_58073_, LevelReader p_58074_, BlockPos p_58075_) {
-        return p_58074_.getBlockState(p_58075_.relative(p_58073_.getValue(FACING).getOpposite())).getMaterial().isSolid();
+
+    private boolean canAttachTo(BlockGetter p_54349_, BlockPos p_54350_, Direction p_54351_) {
+        BlockState blockstate = p_54349_.getBlockState(p_54350_);
+        return blockstate.isFaceSturdy(p_54349_, p_54350_, p_54351_);
     }
 
+    public boolean canSurvive(BlockState p_54353_, LevelReader p_54354_, BlockPos p_54355_) {
+        Direction direction = p_54353_.getValue(FACING);
+        return this.canAttachTo(p_54354_, p_54355_.relative(direction.getOpposite()), direction);
+    }
 
     /* FACING */
 
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
         return this.defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite());
     }
-
     public BlockState rotate(BlockState pState, Rotation pRotation) {
         return pState.setValue(FACING, pRotation.rotate(pState.getValue(FACING)));
     }
-
     public BlockState mirror(BlockState pState, Mirror pMirror) {
         return pState.rotate(pMirror.getRotation(pState.getValue(FACING)));
     }
 
-    public BlockState updateShape(BlockState p_58083_, Direction p_58084_, BlockState p_58085_, LevelAccessor p_58086_, BlockPos p_58087_, BlockPos p_58088_) {
-        return p_58084_.getOpposite() == p_58083_.getValue(FACING) && !p_58083_.canSurvive(p_58086_, p_58087_) ? Blocks.AIR.defaultBlockState() : super.updateShape(p_58083_, p_58084_, p_58085_, p_58086_, p_58087_, p_58088_);
+    public BlockState updateShape(BlockState p_51771_, Direction p_51772_, BlockState p_51773_, LevelAccessor p_51774_, BlockPos p_51775_, BlockPos p_51776_) {
+        return p_51772_ == p_51771_.getValue(FACING) && !p_51771_.canSurvive(p_51774_, p_51775_) ? Blocks.AIR.defaultBlockState() : super.updateShape(p_51771_, p_51772_, p_51773_, p_51774_, p_51775_, p_51776_);
     }
 
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        pBuilder.add(FACING);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_51778_) {
+        p_51778_.add(FACING);
     }
 
 }

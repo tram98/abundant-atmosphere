@@ -7,21 +7,27 @@ import com.teamabnormals.blueprint.core.util.registry.BlockSubRegistryHelper;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.grower.OakTreeGrower;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.fml.common.Mod;
-import net.sheddmer.abundant_atmosphere.AbundantAtmosphere;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.sheddmer.abundant_atmosphere.AbundantAtmosphere;
 import net.sheddmer.abundant_atmosphere.common.blocks.CenterPieceBlock;
 import net.sheddmer.abundant_atmosphere.common.blocks.DeepslatePotBlock;
 import net.sheddmer.abundant_atmosphere.common.blocks.MudPotBlock;
 import net.sheddmer.abundant_atmosphere.common.blocks.BlockProperties;
 import net.sheddmer.abundant_atmosphere.common.blocks.vegetation.*;
+import net.sheddmer.abundant_atmosphere.common.levelgen.grower.AshTreeGrower;
+import net.sheddmer.abundant_atmosphere.common.levelgen.grower.FancyMangroveTreeGrower;
 
 @Mod.EventBusSubscriber(modid = AbundantAtmosphere.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AABlocks {
-    public static final BlockSubRegistryHelper HELPER = AbundantAtmosphere.REGISTRY_HELPER.getBlockSubHelper();
 
-        // Natural blocks
+    public static final BlockSubRegistryHelper HELPER = AbundantAtmosphere.REGISTRY_HELPER.getBlockSubHelper();
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, AbundantAtmosphere.MOD_ID);
+
+    // Natural blocks
     public static final RegistryObject<Block> MOSSY_STONE         = HELPER.createBlock("mossy_stone", () -> new Block(BlockProperties.MOSSY_STONE), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> MOSSY_DEEPSLATE     = HELPER.createBlock("mossy_deepslate", () -> new RotatedPillarBlock(BlockProperties.MOSSY_DEEPSLATE), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> STRIPPED_ASH_LOG    = HELPER.createBlock("stripped_ash_log", () -> new StrippedLogBlock(BlockProperties.ASH_WOOD), CreativeModeTab.TAB_BUILDING_BLOCKS);
@@ -38,8 +44,11 @@ public class AABlocks {
     public static final RegistryObject<Block> ASH_BUTTON          = HELPER.createBlock("ash_button", () -> new BlueprintWoodButtonBlock(BlockProperties.getAshWood(false, true)), CreativeModeTab.TAB_REDSTONE);
     public static final RegistryObject<Block> ASH_TRAPDOOR        = HELPER.createBlock("ash_trapdoor", () -> new WoodTrapDoorBlock(BlockProperties.ASH_WOOD_NOT_SOLID), CreativeModeTab.TAB_REDSTONE);
     public static final RegistryObject<Block> ASH_LEAVES          = HELPER.createBlock("ash_leaves", () -> new BlueprintLeavesBlock(BlockProperties.ASH.leaves()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> ASH_SAPLING         = HELPER.createBlock("ash_sapling", () -> new BlueprintSaplingBlock(new OakTreeGrower(), PropertyUtil.SAPLING), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> HANGING_ASH_LEAVES  = HELPER.createBlock("hanging_ash_leaves", () -> new HangingAshLeavesBlock(BlockProperties.ASH.leaves()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> ASH_SAPLING         = HELPER.createBlock("ash_sapling", () -> new BlueprintSaplingBlock(new AshTreeGrower(), PropertyUtil.SAPLING), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> POTTED_ASH_SAPLING  = HELPER.createBlockNoItem("potted_ash_sapling", () -> new FlowerPotBlock(ASH_SAPLING.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> MANGROVE_WEAVE      = HELPER.createBlock("mangrove_weave", () -> new Block(BlockProperties.MANGROVE_WEAVE), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> MANGROVE_WEAVE_MAT  = HELPER.createBlock("mangrove_weave_mat", () -> new CarpetBlock(BlockProperties.MANGROVE_WEAVE), CreativeModeTab.TAB_DECORATIONS);
 
     // Deco blocks
     public static final RegistryObject<Block> MIXED_BRICKS        = HELPER.createBlock("mixed_bricks", () -> new Block(BlockProperties.MIXED_BRICKS), CreativeModeTab.TAB_BUILDING_BLOCKS);

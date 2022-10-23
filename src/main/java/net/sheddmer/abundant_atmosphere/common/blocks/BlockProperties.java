@@ -2,6 +2,7 @@ package net.sheddmer.abundant_atmosphere.common.blocks;
 
 import com.teamabnormals.blueprint.core.util.PropertyUtil;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -24,6 +25,7 @@ public class BlockProperties {
     public static final BlockBehaviour.Properties CHISELED_MUD_BRICKS = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_LIGHT_GRAY).requiresCorrectToolForDrops().strength(1).explosionResistance(3).sound(SoundType.MUD_BRICKS);
     public static final BlockBehaviour.Properties DEEPSLATE_PILLAR = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE).requiresCorrectToolForDrops().strength(3).explosionResistance(6).sound(SoundType.DEEPSLATE_BRICKS);
     public static final BlockBehaviour.Properties CHISELED_DEEPSLATE_TILES = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE).requiresCorrectToolForDrops().strength(3).explosionResistance(6).sound(SoundType.DEEPSLATE_TILES);
+    public static final BlockBehaviour.Properties MANGROVE_WEAVE = BlockBehaviour.Properties.of(Material.WOOD).strength(0.7F).randomTicks().sound(SoundType.MANGROVE_ROOTS).noOcclusion();
         // Pot blocks
     public static final BlockBehaviour.Properties DEEPSLATE_POT = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE).strength(3).explosionResistance(6).sound(SoundType.DEEPSLATE);
     public static final BlockBehaviour.Properties MUD_POT = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_LIGHT_GRAY).strength(1).explosionResistance(3).sound(SoundType.PACKED_MUD);

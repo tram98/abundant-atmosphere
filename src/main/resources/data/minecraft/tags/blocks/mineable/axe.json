@@ -13,6 +13,9 @@
     "abundant_atmosphere:ash_button",
     "abundant_atmosphere:ash_pressure_plate",
     "abundant_atmosphere:ash_fence",
-    "abundant_atmosphere:ash_fence_gate"
+    "abundant_atmosphere:ash_fence_gate",
+    "abundant_atmosphere:mangrove_weave",
+    "abundant_atmosphere:mangrove_weave_mat"
+
   ]
 }
