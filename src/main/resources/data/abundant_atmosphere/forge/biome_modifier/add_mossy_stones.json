@@ -1,8 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "minecraft:lush_caves",
-  "features": [
-    "abundant_atmosphere:ore_mossy"
-  ],
-  "step": "underground_ores"
-}
