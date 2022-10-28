@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": "abundant_atmosphere:ash_tree",
+    "features": [
+      {
+        "chance": 0.1,
+        "feature": "abundant_atmosphere:ash_tree"
+      }
+    ]
+  }
+}

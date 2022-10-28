@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:savanna",
+  "features": "abundant_atmosphere:ash_tree_gen",
+  "step": "vegetal_decoration"
+}
