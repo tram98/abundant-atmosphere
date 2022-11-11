@@ -17,8 +17,6 @@ public class AAItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, AbundantAtmosphere.MOD_ID);
 
     // Regular items
-    public static final RegistryObject<Item> AMBER_CHUNKS = HELPER.createItem("amber_chunks", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-    public static final RegistryObject<Item> ANCIENT_AMBER = HELPER.createItem("ancient_amber", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<Item> FROG_HIDE = HELPER.createItem("frog_hide", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     // Food items

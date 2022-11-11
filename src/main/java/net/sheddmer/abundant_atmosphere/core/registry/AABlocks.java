@@ -90,14 +90,13 @@ public class AABlocks {
     public static final RegistryObject<Block> PORESHROOM          = HELPER.createBlock("poreshroom", () -> new BlueprintFlowerBlock(() -> MobEffects.GLOWING, 12, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> POTTED_PORESHROOM   = HELPER.createBlockNoItem("potted_poreshroom", () -> new FlowerPotBlock(PORESHROOM.get(), PropertyUtil.FLOWER_POT));
     public static final RegistryObject<Block> PORESHROOM_SHELF    = HELPER.createBlock("poreshroom_shelf", () -> new PoreshroomShelfBlock(BlockProperties.PORESHROOM_SHELF), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> FOXFIRE_MUSHROOM    = HELPER.createBlock("foxfire_mushroom", () -> new BlueprintFlowerBlock(() -> MobEffects.GLOWING, 12, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> FOXFIRE_MUSHROOM    = HELPER.createBlock("foxfire_mushroom", () -> new BlueprintFlowerBlock(() -> MobEffects.WITHER, 10, PropertyUtil.FLOWER), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> POTTED_FOXFIRE_MUSHROOM = HELPER.createBlockNoItem("potted_foxfire_mushroom", () -> new FlowerPotBlock(FOXFIRE_MUSHROOM.get(), PropertyUtil.FLOWER_POT));
     public static final RegistryObject<Block> FOXFIRE_SHELF       = HELPER.createBlock("foxfire_shelf", () -> new FoxfireShelfBlock(BlockProperties.FOXFIRE_SHELF), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> CATSBANE            = HELPER.createBlock("catsbane", () -> new CatsbaneBlock(BlockProperties.CATSBANE), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> POTTED_CATSBANE   = HELPER.createBlockNoItem("potted_catsbane", () -> new FlowerPotBlock(CATSBANE.get(), PropertyUtil.FLOWER_POT));
     public static final RegistryObject<Block> CURVED_MANGROVE_ROOTS = HELPER.createBlock("curved_mangrove_roots", () -> new CurvedRootsBlock(BlockProperties.CURVED_MANGROVE_ROOTS), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> MOSS_CLUMP          = HELPER.createBlock("moss_clump", () -> new GlowLichenBlock(BlockProperties.MOSS_CLUMP), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> SMALL_LILY_PAD    = HELPER.createBlock("small_lily_pad", () -> new WaterlilyBlock(BlockProperties.SMALL_LILY_PAD), CreativeModeTab.TAB_DECORATIONS);
 
         // Trophy blocks
     public static final RegistryObject<Block> CENTERPIECE_STATUE  = HELPER.createBlock("centerpiece_statue", () -> new CenterPieceBlock(BlockProperties.CENTERPIECE_STATUE), CreativeModeTab.TAB_BUILDING_BLOCKS);

@@ -29,14 +29,11 @@ public class BlockProperties {
     public static final BlockBehaviour.Properties DEEPSLATE_POT = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE).strength(3).explosionResistance(6).sound(SoundType.DEEPSLATE);
     public static final BlockBehaviour.Properties MUD_POT = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_LIGHT_GRAY).strength(1).explosionResistance(3).sound(SoundType.PACKED_MUD);
         // Nature deco
-    public static final BlockBehaviour.Properties PORESHROOM = BlockBehaviour.Properties.of(Material.PLANT).instabreak().sound(SoundType.FUNGUS).noCollission().noOcclusion();
     public static final BlockBehaviour.Properties PORESHROOM_SHELF = BlockBehaviour.Properties.of(Material.PLANT).instabreak().sound(SoundType.FUNGUS).noCollission();
-    public static final BlockBehaviour.Properties FOXFIRE_MUSHROOM = BlockBehaviour.Properties.of(Material.PLANT).instabreak().sound(SoundType.FUNGUS).noCollission().noOcclusion().lightLevel((state) -> state.getValue(FoxfireShelfBlock.UNLIT) ? 0 : 4);
     public static final BlockBehaviour.Properties FOXFIRE_SHELF = BlockBehaviour.Properties.of(Material.PLANT).instabreak().sound(SoundType.FUNGUS).noCollission().lightLevel((state) -> state.getValue(FoxfireShelfBlock.UNLIT) ? 0 : 4);
     public static final BlockBehaviour.Properties CATSBANE = BlockBehaviour.Properties.of(Material.PLANT).instabreak().sound(SoundType.FUNGUS).noCollission();
     public static final BlockBehaviour.Properties CURVED_MANGROVE_ROOTS = BlockBehaviour.Properties.of(Material.WOOD).instabreak().sound(SoundType.MANGROVE_ROOTS).noCollission();
     public static final BlockBehaviour.Properties MOSS_CLUMP = BlockBehaviour.Properties.of(Material.MOSS).instabreak().sound(SoundType.MOSS).noCollission();
-    public static final BlockBehaviour.Properties SMALL_LILY_PAD = BlockBehaviour.Properties.of(Material.WATER_PLANT).instabreak().sound(SoundType.LILY_PAD);
         // Trophy blocks
     public static final BlockBehaviour.Properties CENTERPIECE_STATUE = BlockBehaviour.Properties.of(Material.STONE).strength(4f).explosionResistance(6).sound(SoundType.DEEPSLATE);
 
